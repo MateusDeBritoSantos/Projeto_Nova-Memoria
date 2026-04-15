@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-</head>
-<body>
-    
-    <h1>Neymar ta precisando de muleta pra andar em campo, e nego ta la pedindo para carlo ancelloti convocar</h1>
+  <meta charset="UTF-8">
+  <title>Perfil</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d9d9d9;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      height: 80vh;
+      margin: 40px auto;
+      background-color: #e5e5e5;
+    }
+
+    .left {
+      width: 50%;
+      padding: 30px;
+    }
+
+    .right {
+      width: 50%;
+      background-color: #9aa7d6;
+    }
+
+    h1 {
+      color: #8ea2e6;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .field {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #9aa7d6;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+
+    .field span {
+      font-style: italic;
+    }
+
+    .edit {
+      cursor: pointer;
+    }
+
+    .edit:hover {
+      opacity: 0.7;
+    }
+    img{
+        display: flex;
+        width: 250px;
+        height: 250px;
+        margin-top: -472px;
+        margin-left: 1008px;
+        border: 3px;
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Lado esquerdo -->
+    <div class="left">
+      <h1>Perfil</h1>
+
+      <div class="field">
+        <span>Nome:</span>
+        <span class="edit">✏️</span>
+      </div>
+
+      <div class="field">
+        <span>Email:</span>
+        <span class="edit">✏️</span>
+      </div>
+
+      <div class="field">
+        <span>Celular:</span>
+        <span class="edit">✏️</span>
+      </div>
+
+      <div class="field">
+        <span>Alterar Senha:</span>
+        <span class="edit">✏️</span>
+      </div>
+
+      <div class="field">
+        <span>Gênero:</span>
+        <span class="edit">✏️</span>
+      </div>
+
+      <div class="field">
+        <span>Estado:</span>
+        <span class="edit">✏️</span>
+      </div>
+
+      <div class="field">
+        <span>Cidade:</span>
+        <span class="edit">✏️</span>
+      </div>
+    </div>
+
+    <!-- Lado direito -->
+    <div class="right">
+    </div>
+
+  </div>
+    
+  <img src="assests/imagens/brain_onlyw.png" alt="">
 </body>
 </html>
