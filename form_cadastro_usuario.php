@@ -120,7 +120,12 @@ button:hover {
         <input type="date" name="data_cad">
 
         <label>Gênero:</label>
-        <input type="text" name="gen_cad">
+        <label >
+          <input type="radio" name="sexo" value="Masculino"> Masculino
+        </label>
+        <label >
+          <input type="radio" name="sexo" value="Feminino"> Feminino
+        </label>
 
         <label>Estado:</label>
         <input type="text" name="estado_cad">
