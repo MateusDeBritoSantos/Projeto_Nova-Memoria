@@ -2,6 +2,11 @@
 require_once "database.php";
 require_once "header.php"; 
 
+$conexao = mysqli_connect("localhost", "root", "", "nova_memoria");
+if (!$conexao) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 $sql_listar = "SELECT * FROM listar_nova_mem";
 $consulta_bd = mysqli_query($conexao, $sql_listar);
 ?>

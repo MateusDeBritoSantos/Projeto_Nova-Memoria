@@ -1,6 +1,17 @@
 <?php
-require_once "database.php";
+require_once __DIR__ . "/database.php";
 
+if (!isset($conexao)) {
+    if (isset($conn)) {
+        $conexao = $conn;
+    } elseif (isset($link)) {
+        $conexao = $link;
+    } elseif (isset($mysqli)) {
+        $conexao = $mysqli;
+    } else {
+        die("Erro: conexão com o banco de dados não definida.");
+    }
+}
 
 $id_cads = $_POST['id_cads'] ?? null;
 $nome_cad = $_POST['nome_cad'] ?? '';

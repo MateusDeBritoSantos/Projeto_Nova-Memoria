@@ -14,8 +14,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Consulta segura
+    if (!isset($conexao) || !$conexao) {
+        $_SESSION['mensagem'] = "Erro de conexão com o banco de dados.";
+        header("Location: login_usuario.php");
+        exit;
+    }
+    
     $sql = "SELECT * FROM listar_nova_mem WHERE nome_cad = ?";
     $stmt = mysqli_prepare($conexao, $sql);
+    
+    if (!$stmt) {
+        $_SESSION['mensagem'] = "Erro ao preparar a consulta.";
+        header("Location: login_usuario.php");
+        exit;
+    }
+    
     mysqli_stmt_bind_param($stmt, "s", $login);
     mysqli_stmt_execute($stmt);
     $resultado = mysqli_stmt_get_result($stmt);

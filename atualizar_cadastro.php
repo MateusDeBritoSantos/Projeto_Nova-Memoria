@@ -1,6 +1,16 @@
 <?php
 require_once "database.php";
 
+if (!isset($conexao)) {
+    if (isset($conn)) {
+        $conexao = $conn;
+    } elseif (isset($mysqli)) {
+        $conexao = $mysqli;
+    } else {
+        die('Erro: conexão com o banco de dados não encontrada.');
+    }
+}
+
 // Validação e segurança básica
 $id_cads = isset($_POST['id_cads']) ? intval($_POST['id_cads']) : 0;
 $nome_cad = $_POST['nome_cad'] ?? '';

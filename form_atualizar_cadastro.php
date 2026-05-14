@@ -4,6 +4,10 @@
 // importar conexão com o banco
 require_once "database.php";
 
+if (!isset($conexao)) {
+    die('Erro: Conexão com o banco de dados não foi estabelecida. Verifique database.php.');
+}
+
 // recuperar id via GET, com segurança básica
 $id_cads = isset($_GET['id_cads']) ? intval($_GET['id_cads']) : 0;
 

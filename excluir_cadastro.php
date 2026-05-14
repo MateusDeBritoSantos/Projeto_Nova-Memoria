@@ -1,6 +1,8 @@
 <?php
 include "database.php";
 
+$conexao = mysqli_connect('localhost', 'root', '', 'nova_memoria');
+
 if (isset($_GET['id_cads'])) {
     $id_cads = intval($_GET['id_cads']); 
 
