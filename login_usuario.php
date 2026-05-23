@@ -172,7 +172,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <div class="container login">
     <div class="esquerda">
-      <img src="imagens/logo.png" alt="Logo do projeto">
+      <img src="assests/imagens/brain_onlyw.png" alt="Logo do projeto">
       <p>Melhor Tecnologia</p>
       <h1>Exercite sua mente</h1>
       <a href="form_cadastro_usuario.php" class="btn-cadastro">Cadastre-se</a>

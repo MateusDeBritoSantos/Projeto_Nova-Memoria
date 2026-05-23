@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro e Login</title>
   <link rel="stylesheet" href="style.css">
-  <style>
+  <link rel="shortcut icon" href="assests/imagens/brain_onlyw.png" type="image/x-icon">
+<style>
 
 * {
   box-sizing: border-box;
@@ -127,6 +128,11 @@ button:hover {
     flex-direction: column;
   }
 }
+
+img{
+  width: 450px;
+  height: 450px;
+}
 </style>
 
 <!-- teste_login.php -->
@@ -143,7 +149,7 @@ button:hover {
 <body>
   <div class="container login">
     <div class="esquerda">
-      <img src="imagens/brain_onlyw.png">
+      <img src="assests/imagens/brain_onlyw.png">
       <p>Melhor Tecnologia</p>
       <h1>Exercite sua mente</h1>
       <a href="form_cadastro_usuario.php" class="btn-cadastro">Cadastre-se</a>
