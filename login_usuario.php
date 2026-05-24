@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica senha (texto simples)
     if ($usuario && $usuario['senha_cad'] === $password) {
         $_SESSION['usuario'] = $usuario['nome_cad'];
-        header("Location: pagina_principal.php");
+        header("Location: pagina_principal.html");
         exit;
     } else {
         $_SESSION['mensagem'] = "Nome ou senha inválidos.";
