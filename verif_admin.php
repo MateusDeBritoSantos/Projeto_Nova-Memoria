@@ -15,7 +15,7 @@ if (!isset($_SESSION['id_cads'])) {
 }
 
 if ($_SESSION['nivel_cad'] != 2) {
-    header("Location: pagina_principal.html");
+    header("Location: pagina_principal.php");
     exit();
 }
 ?>

@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // $_SESSION['gen_cad'] = $usuario['gen_cad'];
         // $_SESSION['estado_cad'] = $usuario['estado_cad'];
         // $_SESSION['cidade_cad'] = $usuario['cidade_cad'];
-        header("Location: pagina_principal.html");
+        header("Location: pagina_principal.php");
         exit;
     } else {
         $_SESSION['mensagem'] = "Nome ou senha inválidos.";

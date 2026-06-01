@@ -1,3 +1,4 @@
+<?php require_once "acessibilidade.php"; ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">

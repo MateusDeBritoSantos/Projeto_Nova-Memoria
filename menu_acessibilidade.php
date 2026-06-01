@@ -22,7 +22,9 @@
                     Texto -
                 </button>
             
-
+                <button onclick="trocarFonte()">
+                    Alterar Fonte
+                </button>
             
                 <button onclick="maisEspacoLinha()">
                     Espaço Linhas
@@ -32,9 +34,9 @@
                     Espaço Letras
                 </button>
             
-                <button onclick="contrasteAlto()">
+                <!-- <button onclick="contrasteAlto()">
                     Alto Contraste
-                </button>
+                </button> -->
             
                 <button onclick="resetarAcessibilidade()">
                     Restaurar

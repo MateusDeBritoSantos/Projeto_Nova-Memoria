@@ -84,8 +84,25 @@ $usuario = mysqli_fetch_assoc($resultado);
         margin-top: -525px;
         margin-left: 1115px;
         border: 3px;
-
     }
+  .btn-editar{
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btn-excluir{
+    background: #dc3545;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    
 
   </style>
 </head>
@@ -132,7 +149,19 @@ $usuario = mysqli_fetch_assoc($resultado);
         <span>Cidade: <?php echo htmlspecialchars($usuario['cidade_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
+      <div style="margin-top:20px;">
+        
+        <a href="editar_perfil.php" class="btn-editar">
+          Editar Perfil
+        </a>
+        
+        <a href="excluir_perfil.php" class="btn-excluir"
+        onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não poderá ser desfeita.');">
+        Excluir Conta
+      </a>
+      
     </div>
+  </div>
 
     <!-- Lado direito -->
     <div class="right">

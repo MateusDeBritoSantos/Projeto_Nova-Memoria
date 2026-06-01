@@ -51,22 +51,25 @@ function diminuirTexto() {
 // ALTERAR FONTE
 // =============================
 
+let indiceFonte = 0;
+
+const fontes = [
+    "Arial, sans-serif",
+    "Verdana, sans-serif",
+    "Tahoma, sans-serif",
+    "Trebuchet MS, sans-serif"
+];
+
 function trocarFonte() {
 
-    if (!fonteAlternativa) {
+    indiceFonte++;
 
-        document.body.style.fontFamily =
-            "Verdana, sans-serif";
-
-        fonteAlternativa = true;
-
-    } else {
-
-        document.body.style.fontFamily =
-            "Arial, sans-serif";
-
-        fonteAlternativa = false;
+    if (indiceFonte >= fontes.length) {
+        indiceFonte = 0;
     }
+
+    document.body.style.fontFamily =
+        fontes[indiceFonte];
 }
 
 
@@ -100,29 +103,29 @@ function maisEspacoLetra() {
 // ALTO CONTRASTE
 // =============================
 
-function contrasteAlto() {
+// function contrasteAlto() {
 
-    if (!contrasteAtivo) {
+//     if (!contrasteAtivo) {
 
-        document.body.style.backgroundColor =
-            "black";
+//         document.body.style.backgroundColor =
+//             "black";
 
-        document.body.style.color =
-            "yellow";
+//         document.body.style.color =
+//             "yellow";
 
-        contrasteAtivo = true;
+//         contrasteAtivo = true;
 
-    } else {
+//     } else {
 
-        document.body.style.backgroundColor =
-            "";
+//         document.body.style.backgroundColor =
+//             "";
 
-        document.body.style.color =
-            "";
+//         document.body.style.color =
+//             "";
 
-        contrasteAtivo = false;
-    }
-}
+//         contrasteAtivo = false;
+//     }
+// }
 
 
 // =============================
