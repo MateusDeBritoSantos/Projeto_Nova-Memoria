@@ -1,19 +1,17 @@
-
-
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro e Login</title>
+
   <link rel="stylesheet" href="css/style.css">
+
   <style>
-    form {
+form {
   display: flex;
   flex-direction: column;
 }
-/* css cadastro */
 
 * {
   box-sizing: border-box;
@@ -63,7 +61,7 @@ form label {
   color: #666;
 }
 
-form input {
+form input, form select {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -92,85 +90,137 @@ button:hover {
   }
 }
 
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.btn-ok {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
   </style>
 </head>
+
 <body>
-  <!-- tela de cadastro -->
-  <div class="container cadastro">
-    <div class="form-container">
-      <h2>Cadastre-se</h2>
-      <form action="cadastro_usuario.php" method="post">
-        <label>Nome:</label>
-        <input type="text" name="nome_cad">
 
-        <label>Email:</label>
-        <input type="email" name="email_cad">
+<!-- ✅ MODAL DE SUCESSO -->
+<?php if (isset($_GET['cadastro']) && $_GET['cadastro'] == 'sucesso') { ?>
 
-        <label>Celular:</label>
-        <input type="text" name="celular_cad">
+<div class="modal">
+  <div class="modal-content">
+    <h2>Cadastro realizado com sucesso!</h2>
+    <p>Seu usuário foi criado corretamente.</p>
 
-        <label>Senha:</label>
-        <input type="password" name="senha_cad">
+    <button class="btn-ok" onclick="window.location.href='index.php'">
+      OK
+    </button>
+  </div>
+</div>
 
-        <label>Confirmação de Senha:</label>
-        <input type="password" name="confirmarsenha_cad">
+<?php } ?>
 
-        <label>Data de Nascimento:</label>
-        <input type="date" name="data_cad">
-        
-        <label for="sexo">Gênero:</label>
-        
-        <select name="gen_cad" id="sexo">
-          <option value="">Selecione</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Feminino">Feminino</option>
-        </select>
 
-        <label for = "estado">Estado:</label>
-        
-        <select name="estado_cad" id="estado">
-            <option value="">Selecione</option>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</	option>
-            <option value="PI">Piauí</	option>
-            <option value="RJ">Rio de Janeiro</	option>
-            <option value="RN">Rio Grande do Norte</	option>
-            <option value="RS">Rio Grande do Sul</	option>
-            <option value="RO">Rondônia</	option>
-            <option value="RR">Roraima</	option>
-            <option value="SC">Santa Catarina</	option>
-            <option value="SP">São Paulo</	option>
-            <option value="SE">Sergipe</	option>
-            <option value="TO">Tocantins</	option>
-        </select>
+<!-- CADASTRO -->
+<div class="container cadastro">
+  <div class="form-container">
 
-        <label>Cidade:</label>
-        <input type="text" name="cidade_cad">
+    <h2>Cadastre-se</h2>
 
-        <button type="submit">Cadastrar</button>
-      </form>
-    </div>
-    <div class="imagem-lateral"></div>
+    <!-- 👇 FORM CORRETO -->
+    <form action="cadastro_usuario.php" method="post">
+
+      <label>Nome:</label>
+      <input type="text" name="nome_cad">
+
+      <label>Email:</label>
+      <input type="email" name="email_cad">
+
+      <label>Celular:</label>
+      <input type="text" name="celular_cad">
+
+      <label>Senha:</label>
+      <input type="password" name="senha_cad">
+
+      <label>Confirmação de Senha:</label>
+      <input type="password" name="confirmarsenha_cad">
+
+      <label>Data de Nascimento:</label>
+      <input type="date" name="data_cad">
+
+      <label for="sexo">Gênero:</label>
+      <select name="gen_cad" id="sexo">
+        <option value="">Selecione</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+      </select>
+
+      <label for="estado">Estado:</label>
+      <select name="estado_cad" id="estado">
+        <option value="">Selecione</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+
+      <label>Cidade:</label>
+      <input type="text" name="cidade_cad">
+
+      <button type="submit">Cadastrar</button>
+
+    </form>
   </div>
 
+  <div class="imagem-lateral"></div>
+</div>
 
-
-
+</body>
+</html>
 
 
 

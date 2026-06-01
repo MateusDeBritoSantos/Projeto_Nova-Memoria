@@ -150,6 +150,25 @@ img{
 
 
 <body>
+  <?php
+
+if(isset($_GET['status']) &&
+   $_GET['status'] == 'conta_excluida'){
+
+    echo "
+    <div style='
+        background:#d4edda;
+        color:#155724;
+        padding:15px;
+        margin:15px;
+        border-radius:5px;
+        text-align:center;
+    '>
+        Conta excluída com sucesso.
+    </div>
+    ";
+}
+?>
   <div class="container login">
     <div class="esquerda">
       <img src="assests/imagens/brain_onlyw.png">

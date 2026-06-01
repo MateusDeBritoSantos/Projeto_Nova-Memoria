@@ -1,5 +1,4 @@
 <?php
-
 require_once "verifica_login.php";
 require_once "database.php";
 
@@ -101,13 +100,37 @@ $usuario = mysqli_fetch_assoc($resultado);
     text-decoration: none;
     border-radius: 5px;
 }
+.btn-voltar{
+    background:#6c757d;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    margin-top:10px;
+}
 
+.btn-voltar:hover{
+    opacity:0.9;
+}
     
 
   </style>
 </head>
 
 <body>
+  <?php 
+
+if(isset($_SESSION['mensagem'])){
+
+    echo "<div class='sucesso'>"
+         . $_SESSION['mensagem'] .
+         "</div>";
+
+    unset($_SESSION['mensagem']);
+}
+?>
+
 
   <div class="container">
 
@@ -117,37 +140,37 @@ $usuario = mysqli_fetch_assoc($resultado);
 
       <div class="field">
         <span>Nome: <?php echo htmlspecialchars($usuario['nome_cad']); ?></span>
-        <span class="edit">✏️</span>
+        <span class="edit"></span>
       </div>
 
       <div class="field">
         <span>Email: <?php echo htmlspecialchars($usuario['email_cad']); ?></span>
-        <span class="edit">✏️</span>
+        <span class="edit"></span>
       </div>
 
       <div class="field">
         <span>Celular: <?php echo htmlspecialchars($usuario['celular_cad']); ?></span>
-        <span class="edit">✏️</span>
+        <span class="edit"></span>
       </div>
 
       <div class="field">
         <span>Data de Nascimento: <?php echo htmlspecialchars($usuario['data_cad']); ?></span>
-        <span class="edit">✏️</span>
+        <span class="edit"></span>
       </div>
 
       <div class="field">
         <span>Gênero: <?php echo htmlspecialchars($usuario['gen_cad']); ?></span>
-        <span class="edit">✏️</span>
+        <span class="edit"></span>
       </div>
 
       <div class="field">
         <span>Estado: <?php echo htmlspecialchars($usuario['estado_cad']); ?></span>
-        <span class="edit">✏️</span>
+        <span class="edit"></span>
       </div>
 
       <div class="field">
         <span>Cidade: <?php echo htmlspecialchars($usuario['cidade_cad']); ?></span>
-        <span class="edit">✏️</span>
+        <span class="edit"></span>
       </div>
       <div style="margin-top:20px;">
         
@@ -159,6 +182,10 @@ $usuario = mysqli_fetch_assoc($resultado);
         onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não poderá ser desfeita.');">
         Excluir Conta
       </a>
+      
+          <a href="pagina_principal.php" class="btn-voltar">
+            Voltar para Página Inicial
+          </a>
       
     </div>
   </div>

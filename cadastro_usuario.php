@@ -52,8 +52,9 @@ mysqli_stmt_bind_param($stmt, "sssssssss",
 
 if (mysqli_stmt_execute($stmt)) {
     mysqli_stmt_close($stmt);
-    header("Location: index.php");
+        header("Location: form_cadastro_usuario.php?cadastro=sucesso");
     exit;
+ 
 } else {
     echo "Falha ao realizar cadastro: " . mysqli_error($conexao);
 }
