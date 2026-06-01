@@ -3,6 +3,7 @@ require_once "verif_admin.php";
 require_once "database.php";
 require_once "header.php"; 
 
+
 $conexao = mysqli_connect("localhost", "root", "", "nova_mem");
 if (!$conexao) {
     die("Connection failed: " . mysqli_connect_error());

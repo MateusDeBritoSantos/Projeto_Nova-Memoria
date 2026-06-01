@@ -1,0 +1,93 @@
+/* Botão flutuante */
+
+#btnAcessibilidade{
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    background: #8ea2e6;
+    color: white;
+
+    z-index: 9999;
+}
+
+/* Painel lateral */
+
+#painelAcessibilidade{
+
+    position: fixed;
+
+    top: 0;
+    right: -350px;
+
+    width: 320px;
+    height: 100vh;
+
+    background: white;
+
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+
+    padding: 20px;
+
+    transition: 0.3s;
+
+    z-index: 9998;
+}
+
+/* Quando aberto */
+
+#painelAcessibilidade.ativo{
+
+    right: 0;
+}
+
+/* Título */
+
+#painelAcessibilidade h3{
+
+    margin-top: 0;
+
+    color: #333;
+}
+
+/* Botões */
+
+#painelAcessibilidade button{
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #8ea2e6;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+/* Hover */
+
+#painelAcessibilidade button:hover{
+
+    opacity: 0.8;
+}
