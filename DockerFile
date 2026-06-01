@@ -15,7 +15,10 @@ COPY . /var/www/html/
 # Permissões corretas
 RUN chown -R www-data:www-data /var/www/html
 
-# Expõe porta padrão do Apache
-EXPOSE 80
+# Força o Apache a escutar na porta 8080 (para alinhar com o Railway)
+RUN sed -i 's/80/8080/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
+
+# Expõe a porta 8080
+EXPOSE 8080
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html
