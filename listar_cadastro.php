@@ -1,4 +1,5 @@
 <?php 
+require_once "verif_admin.php";
 require_once "database.php";
 require_once "header.php"; 
 

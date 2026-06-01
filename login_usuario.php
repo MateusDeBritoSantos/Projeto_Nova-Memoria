@@ -34,9 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = mysqli_stmt_get_result($stmt);
     $usuario = mysqli_fetch_assoc($resultado);
 
-    // Verifica senha (texto simples)
+    // Verifica senha (texto simples) também parte da sessão enviando dados importantes que podem ser usados para verificações
     if ($usuario && $usuario['senha_cad'] === $password) {
-        $_SESSION['usuario'] = $usuario['nome_cad'];
+        $_SESSION['usuario'] = $usuario['nome_cad'];  
+        $_SESSION['id_cads'] = $usuario['id_cads'];
+        $_SESSION['nivel_cad'] = $usuario['nivel_cad'];
         header("Location: pagina_principal.html");
         exit;
     } else {
