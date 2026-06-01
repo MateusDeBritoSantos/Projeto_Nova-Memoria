@@ -1,10 +1,21 @@
 FROM php:8.2-apache
 
-# Ativa mod rewrite (importante para PHP)
+# Instala extensões necessárias para MySQL
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Ativa mod_rewrite (importante para URLs amigáveis e projetos PHP)
 RUN a2enmod rewrite
 
-# Copia arquivos do projeto
+# Define o diretório padrão do Apache
+WORKDIR /var/www/html
+
+# Copia todos os arquivos do projeto
 COPY . /var/www/html/
 
-# Permissões
+# Permissões corretas
 RUN chown -R www-data:www-data /var/www/html
+
+# Expõe porta padrão do Apache
+EXPOSE 80
+
+ENV APACHE_DOCUMENT_ROOT /var/www/html
