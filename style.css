@@ -275,6 +275,90 @@ main ul li b {
   margin-bottom: 5px;
 }
 
+/* Página de desempenho */
+#desempenho {
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+#desempenho .usuario {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#desempenho .usuario img {
+  width: 60px;
+  height: 60px;
+}
+
+#desempenho .usuario h2,
+#desempenho .usuario p {
+  margin: 0;
+}
+
+#desempenho .caixa {
+  background-color: #f5faff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+}
+
+#desempenho .chamada {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#desempenho .chamada img {
+  width: 110px;
+  height: 110px;
+}
+
+#desempenho .progresso {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#desempenho .porcentagem {
+  background-color: #fff;
+  border: 1px solid #7bb4c7;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+}
+
+#desempenho .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#desempenho .card {
+  border: 1px solid #ccc;
+  width: 180px;
+  height: 160px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+#desempenho .card p {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #000;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   aside {
@@ -285,12 +369,19 @@ main ul li b {
     padding: 10px;
   }
 
-  #teste .cards {
+  #teste .cards,
+  #desempenho .cards {
     flex-direction: column;
     align-items: center;
   }
 
   main section {
     padding: 20px;
+  }
+
+  #desempenho .chamada,
+  #desempenho .progresso {
+    flex-direction: column;
+    text-align: center;
   }
 }
