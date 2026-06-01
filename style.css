@@ -239,6 +239,7 @@ main h1 {
   margin-top: 40px;
   margin-bottom: 30px;
   color: #333;
+  z-index: 1;
 }
 
 main h2 {
@@ -273,6 +274,16 @@ main ul li b {
   font-size: 1.1em;
   color: #000;
   margin-bottom: 5px;
+}
+
+.purple{
+  position: absolute;
+  display: flex;
+  height: 90px;
+  width: 1690px;
+   margin-left: 5px;
+  background-color: #7bb4c7;
+  
 }
 
 /* Página de desempenho */
