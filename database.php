@@ -5,12 +5,14 @@ $server = "localhost";
 $server_user = "root";
 $server_password = "";
 $database_name = "nova_mem";
+$port = "3306";
 
 //  SOBRESCREVE SE ESTIVER NO RENDER/RAILWAY
 $server = getenv("MYSQLHOST") ?: $server;
 $server_user = getenv("MYSQLUSER") ?: $server_user;
 $server_password = getenv("MYSQLPASSWORD") ?: $server_password;
 $database_name = getenv("MYSQL_DATABASE") ?: $database_name;
+$port = getenv("MYSQLPORT") ?: $port;
 
 //  CONEXÃO
 $conexao = mysqli_connect($server, $server_user, $server_password, $database_name);
