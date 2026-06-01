@@ -1,0 +1,10 @@
+FROM php:8.2-apache
+
+# Ativa mod rewrite (importante para PHP)
+RUN a2enmod rewrite
+
+# Copia arquivos do projeto
+COPY . /var/www/html/
+
+# Permissões
+RUN chown -R www-data:www-data /var/www/html
