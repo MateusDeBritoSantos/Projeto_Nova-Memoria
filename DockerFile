@@ -1,24 +1,22 @@
 FROM php:8.2-apache
 
-# Instala extensões necessárias para MySQL
+# 1. Instala as extensões do MySQL
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Ativa mod_rewrite (importante para URLs amigáveis e projetos PHP)
+# 2. Ativa o mod_rewrite
 RUN a2enmod rewrite
 
-# Define o diretório padrão do Apache
+# 3. Define o diretório padrão
 WORKDIR /var/www/html
 
-# Copia todos os arquivos do projeto
+# 4. Copia os arquivos do projeto
 COPY . /var/www/html/
 
-# Permissões corretas
+# 5. Ajusta as permissões dos arquivos
 RUN chown -R www-data:www-data /var/www/html
 
-# Força o Apache a escutar na porta 8080 (para alinhar com o Railway)
+# 6. Altera a porta de 80 para 8080 nos arquivos de configuração do Apache
 RUN sed -i 's/80/8080/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
 
-# Expõe a porta 8080
+# 7. Informa a porta correta
 EXPOSE 8080
-
-ENV APACHE_DOCUMENT_ROOT /var/www/html
