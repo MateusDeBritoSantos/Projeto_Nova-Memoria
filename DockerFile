@@ -6,6 +6,11 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 # Ativa mod_rewrite (importante para URLs amigáveis e projetos PHP)
 RUN a2enmod rewrite
 
+# Garante que apenas o mpm_prefork está ativo (evita conflito de MPM)
+RUN a2dismod mpm_event || true
+RUN a2dismod mpm_worker || true
+RUN a2enmod mpm_prefork
+
 # Define o diretório padrão do Apache
 WORKDIR /var/www/html
 
