@@ -1,3 +1,23 @@
+<?php
+
+require_once "verifica_login.php";
+require_once "database.php";
+
+$id = $_SESSION['id_cads'];
+
+$sql = "SELECT * FROM listar_nova_mem WHERE id_cads = ?";
+$stmt = mysqli_prepare($conexao, $sql);
+
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+
+$resultado = mysqli_stmt_get_result($stmt);
+$usuario = mysqli_fetch_assoc($resultado);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -61,8 +81,8 @@
         display: flex;
         width: 250px;
         height: 250px;
-        margin-top: -472px;
-        margin-left: 1008px;
+        margin-top: -525px;
+        margin-left: 1115px;
         border: 3px;
 
     }
@@ -79,37 +99,37 @@
       <h1>Perfil</h1>
 
       <div class="field">
-        <span>Nome:</span>
+        <span>Nome: <?php echo htmlspecialchars($usuario['nome_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
 
       <div class="field">
-        <span>Email:</span>
+        <span>Email: <?php echo htmlspecialchars($usuario['email_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
 
       <div class="field">
-        <span>Celular:</span>
+        <span>Celular: <?php echo htmlspecialchars($usuario['celular_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
 
       <div class="field">
-        <span>Alterar Senha:</span>
+        <span>Data de Nascimento: <?php echo htmlspecialchars($usuario['data_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
 
       <div class="field">
-        <span>Gênero:</span>
+        <span>Gênero: <?php echo htmlspecialchars($usuario['gen_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
 
       <div class="field">
-        <span>Estado:</span>
+        <span>Estado: <?php echo htmlspecialchars($usuario['estado_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
 
       <div class="field">
-        <span>Cidade:</span>
+        <span>Cidade: <?php echo htmlspecialchars($usuario['cidade_cad']); ?></span>
         <span class="edit">✏️</span>
       </div>
     </div>

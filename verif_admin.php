@@ -1,11 +1,11 @@
-<?php
+//<?php
 
-// session_start();
+//session_start();
 
-// echo "<pre>";
-// print_r($_SESSION);
-// echo "</pre>";
-// exit();
+//echo "<pre>";
+//print_r($_SESSION);
+//echo "</pre>";
+//exit();
 
 session_start();
 

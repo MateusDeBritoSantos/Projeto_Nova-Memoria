@@ -39,6 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['usuario'] = $usuario['nome_cad'];  
         $_SESSION['id_cads'] = $usuario['id_cads'];
         $_SESSION['nivel_cad'] = $usuario['nivel_cad'];
+        // $_SESSION['email_cad'] = $usuario['email_cad'];
+        // $_SESSION['celular_cad'] = $usuario['celular_cad'];
+        // $_SESSION['data_cad'] = $usuario['data_cad'];
+        // $_SESSION['gen_cad'] = $usuario['gen_cad'];
+        // $_SESSION['estado_cad'] = $usuario['estado_cad'];
+        // $_SESSION['cidade_cad'] = $usuario['cidade_cad'];
         header("Location: pagina_principal.html");
         exit;
     } else {
