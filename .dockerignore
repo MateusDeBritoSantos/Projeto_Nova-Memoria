@@ -1,0 +1,11 @@
+# Ignorar pastas de configuração local do XAMPP / Apache
+.htaccess
+*.conf
+conf/
+apache/
+
+# Ignorar controle de versão e lixo do sistema
+.git
+.gitignore
+.DS_Store
+Thumbs.db
