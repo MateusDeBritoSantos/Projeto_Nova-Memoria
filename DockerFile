@@ -6,6 +6,11 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 # 2. Ativa o mod_rewrite
 RUN a2enmod rewrite
 
+# 3. Configura o Apache para usar o MPM Prefork, que é mais compatível com o PHP
+RUN a2dismod mpm_event || true
+RUN a2dismod mpm_worker || true
+RUN a2enmod mpm_prefork
+
 # 3. Define o diretório padrão
 WORKDIR /var/www/html
 
