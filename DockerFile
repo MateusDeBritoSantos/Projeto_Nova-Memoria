@@ -6,22 +6,27 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 # 2. Ativa o mod_rewrite
 RUN a2enmod rewrite
 
-# 3. Configura o Apache para usar o MPM Prefork, que é mais compatível com o PHP
+# 3. Garante que apenas o mpm_prefork está ativo (evita conflito de MPM)
 RUN a2dismod mpm_event || true
 RUN a2dismod mpm_worker || true
 RUN a2enmod mpm_prefork
 
-# 3. Define o diretório padrão
+# 4. Define o diretório padrão
 WORKDIR /var/www/html
 
-# 4. Copia os arquivos do projeto
+# 5. Copia os arquivos do projeto
 COPY . /var/www/html/
 
-# 5. Ajusta as permissões dos arquivos
+# 6. Ajusta as permissões dos arquivos
 RUN chown -R www-data:www-data /var/www/html
 
-# 6. Altera a porta de 80 para 8080 nos arquivos de configuração do Apache
+# 7. Altera a porta de 80 para 8080 nos arquivos de configuração do Apache
 RUN sed -i 's/80/8080/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
 
-# 7. Informa a porta correta
+# 8. Remove conflicting MPM configurations
+RUN rm -f /etc/apache2/mods-enabled/mpm_*.load /etc/apache2/mods-enabled/mpm_*.conf && \
+    ln -s /etc/apache2/mods-available/mpm_prefork.load /etc/apache2/mods-enabled/mpm_prefork.load && \
+    ln -s /etc/apache2/mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf
+
+# 9. Informa a porta correta
 EXPOSE 8080
