@@ -48,15 +48,15 @@
       <div class="cards">
         <div class="card">
           <h3>Palavra Cruzada</h3>
-          <p>Age 65+</p>
+          <p>Idade 65+</p>
         </div>
         <div class="card">
           <h3>Jogo da Memória</h3>
-          <p>Age 70+</p>
+          <p>Idade 70+</p>
         </div>
         <div class="card">
           <h3>Quebra Cabeça</h3>
-          <p>Age 60+</p>
+          <p>Idade 60+</p>
         </div>
       </div>
     </section>

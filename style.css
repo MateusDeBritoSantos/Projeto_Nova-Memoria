@@ -313,7 +313,7 @@ main ul li b {
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 25px;
-  border-radius: 4px;
+  border-radius: 16px;
 }
 
 #desempenho .chamada {
@@ -336,7 +336,12 @@ main ul li b {
 #desempenho .porcentagem {
   background-color: #fff;
   border: 1px solid #7bb4c7;
-  padding: 20px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   font-size: 1.5em;
   font-weight: bold;
   color: #000;
@@ -357,7 +362,7 @@ main ul li b {
   margin: 10px;
   padding: 15px;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 16px;
   background-color: #fff;
 }
 
