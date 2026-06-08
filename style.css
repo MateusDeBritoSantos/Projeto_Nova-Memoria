@@ -73,6 +73,9 @@ header a {
   background-color: #a7d5e5;
   text-align: center;
   padding: 50px 20px;
+  max-width: none;
+  width: 100%;
+  margin: 0;
 }
 
 #hero h2 {
