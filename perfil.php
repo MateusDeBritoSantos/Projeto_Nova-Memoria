@@ -22,6 +22,7 @@ $usuario = mysqli_fetch_assoc($resultado);
 <head>
   <meta charset="UTF-8">
   <title>Perfil</title>
+  <link rel="shortcut icon" href="assests/imagens/brain_onlyw.png" type="image/x-icon">
 
   <style>
     body {
@@ -46,6 +47,9 @@ $usuario = mysqli_fetch_assoc($resultado);
     .right {
       width: 50%;
       background-color: #9aa7d6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     h1 {
@@ -76,13 +80,9 @@ $usuario = mysqli_fetch_assoc($resultado);
     .edit:hover {
       opacity: 0.7;
     }
-    img{
-        display: flex;
+    .logo-perfil{
         width: 250px;
         height: 250px;
-        margin-top: -525px;
-        margin-left: 1115px;
-        border: 3px;
     }
   .btn-editar{
     background: #28a745;
@@ -192,11 +192,10 @@ if(isset($_SESSION['mensagem'])){
 
     <!-- Lado direito -->
     <div class="right">
+      <img src="assests/imagens/brain_onlyw.png" alt="Logo Nova Memória" class="logo-perfil">
     </div>
 
   </div>
     
-  <img src="assests/imagens/brain_onlyw.png" alt="">
-  <link rel="shortcut icon" href="assests/imagens/brain_onlyw.png" type="image/x-icon">
 </body>
 </html>

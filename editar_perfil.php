@@ -22,6 +22,121 @@ $usuario = mysqli_fetch_assoc($resultado);
 <head>
 <meta charset="UTF-8">
 <title>Editar Perfil</title>
+<style>
+    body{
+
+    margin:0;
+
+    font-family: Arial, sans-serif;
+
+    background:#d9d9d9;
+}
+
+.container{
+
+    width:90%;
+
+    margin:40px auto;
+}
+
+h1{
+
+    color:#8ea2e6;
+
+    font-size:60px;
+
+    font-weight:normal;
+
+    margin-bottom:30px;
+}
+
+form{
+
+    width:85%;
+}
+
+input,
+select{
+
+    width:100%;
+
+    background:#9aa7d6;
+
+    color:white;
+
+    border:none;
+
+    padding:18px;
+
+    margin-bottom:12px;
+
+    border-radius:4px;
+
+    font-size:18px;
+
+    box-sizing:border-box;
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    box-shadow:0 0 5px #6f7fd3;
+}
+
+.botoes{
+
+    margin-top:30px;
+
+    display:flex;
+
+    gap:15px;
+}
+
+button{
+
+    background:#7c83f0;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 25px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+}
+
+.btn-voltar{
+
+    background:#666;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 25px;
+
+    border-radius:5px;
+}
+
+.lateral{
+
+    position:fixed;
+
+    right:0;
+
+    top:0;
+
+    width:110px;
+
+    height:100vh;
+
+    background:#9aa7d6;
+}
+</style>
 </head>
 
 <body>
@@ -150,118 +265,3 @@ $usuario = mysqli_fetch_assoc($resultado);
 </body>
 </html>
 
-<style>
-    body{
-
-    margin:0;
-
-    font-family: Arial, sans-serif;
-
-    background:#d9d9d9;
-}
-
-.container{
-
-    width:90%;
-
-    margin:40px auto;
-}
-
-h1{
-
-    color:#8ea2e6;
-
-    font-size:60px;
-
-    font-weight:normal;
-
-    margin-bottom:30px;
-}
-
-form{
-
-    width:85%;
-}
-
-input,
-select{
-
-    width:100%;
-
-    background:#9aa7d6;
-
-    color:white;
-
-    border:none;
-
-    padding:18px;
-
-    margin-bottom:12px;
-
-    border-radius:4px;
-
-    font-size:18px;
-
-    box-sizing:border-box;
-}
-
-input:focus,
-select:focus{
-
-    outline:none;
-
-    box-shadow:0 0 5px #6f7fd3;
-}
-
-.botoes{
-
-    margin-top:30px;
-
-    display:flex;
-
-    gap:15px;
-}
-
-button{
-
-    background:#7c83f0;
-
-    color:white;
-
-    border:none;
-
-    padding:15px 25px;
-
-    border-radius:5px;
-
-    cursor:pointer;
-}
-
-.btn-voltar{
-
-    background:#666;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:15px 25px;
-
-    border-radius:5px;
-}
-
-.lateral{
-
-    position:fixed;
-
-    right:0;
-
-    top:0;
-
-    width:110px;
-
-    height:100vh;
-
-    background:#9aa7d6;
-}
-</style>
