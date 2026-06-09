@@ -1,7 +1,9 @@
 <?php
 require_once "verifica_login.php";
 require_once "database.php";
-
+// parte do código responsável por exibir os dados do usuário logado, para isso pega o id do usuário logado, 
+// prepara a consulta para buscar os dados, vincula o id, executa a consulta, pega o resultado e converte em um array para 
+// exibir no perfil.
 $id = $_SESSION['id_cads'];
 
 $sql = "SELECT * FROM listar_nova_mem WHERE id_cads = ?";

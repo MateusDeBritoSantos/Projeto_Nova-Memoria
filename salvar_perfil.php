@@ -2,7 +2,9 @@
 
 session_start();
 require_once "database.php";
-
+// apos fazer as atualizações no perfil, o formulário de edição envia os dados para este arquivo, onde pega os dados do formulário,
+// prepara a consulta de atualização, vincula os dados, 
+// executa a consulta e redireciona para o perfil com uma mensagem de sucesso ou erro.
 $id_cads = $_POST['id_cads'];
 $nome = $_POST['nome_cad'];
 $email = $_POST['email_cad'];

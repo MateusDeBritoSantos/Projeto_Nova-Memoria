@@ -25,3 +25,6 @@ if(mysqli_stmt_execute($stmt)){
 }
 
 ?>
+<!-- basicamnete a mesma coisa do excluir_cadastro.php, mas aqui é para o usuário excluir a própria conta, 
+então pega o id do usuário logado, prepara a consulta de exclusão, vincula o id, executa, 
+destrói a sessão e redireciona para a página inicial ou exibe erro. -->

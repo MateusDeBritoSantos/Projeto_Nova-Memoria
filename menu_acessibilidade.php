@@ -34,9 +34,7 @@
                     Espaço Letras
                 </button>
             
-                <!-- <button onclick="contrasteAlto()">
-                    Alto Contraste
-                </button> -->
+              
             
                 <button onclick="resetarAcessibilidade()">
                     Restaurar

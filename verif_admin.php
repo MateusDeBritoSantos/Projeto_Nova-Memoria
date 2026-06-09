@@ -1,11 +1,6 @@
-//<?php
+<?php
 
-//session_start();
-
-//echo "<pre>";
-//print_r($_SESSION);
-//echo "</pre>";
-//exit();
+//parte responsável por verificar o nivel do usuario se e admin ou user.
 
 session_start();
 

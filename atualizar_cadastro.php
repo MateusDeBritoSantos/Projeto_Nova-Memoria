@@ -10,6 +10,7 @@ if (!isset($conexao)) {
         die('Erro: conexão com o banco de dados não encontrada.');
     }
 }
+// conexão com banco de dados e verificação se a variável existe
 
 // Validação e segurança básica
 $id_cads = isset($_POST['id_cads']) ? intval($_POST['id_cads']) : 0;
@@ -56,6 +57,7 @@ mysqli_stmt_bind_param($stmt, "sssssssssi",
     $cidade_cad, 
     $id_cads
 );
+// vinculacao do dados com a consulta s=stringer i=inteiro
 
 // Executar e redirecionar
 if (mysqli_stmt_execute($stmt)) {

@@ -21,3 +21,5 @@ if (isset($_GET['id_cads'])) {
     echo "ID não informado para exclusão.";
 }
 ?>
+
+<!-- parte da exclusão do cadastro, verifica se o id foi passado, prepara a consulta de exclusão, vincula o id, executa e redireciona para a listagem ou exibe erro. -->

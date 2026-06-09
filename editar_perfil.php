@@ -4,7 +4,7 @@ require_once "verifica_login.php";
 require_once "database.php";
 
 $id_cads = $_SESSION['id_cads'];
-
+//obtém o id do usuário logado para buscar os dados e fazer a consulta sql
 $sql = "SELECT * FROM listar_nova_mem WHERE id_cads = ?";
 
 $stmt = mysqli_prepare($conexao, $sql);
@@ -13,7 +13,7 @@ mysqli_stmt_execute($stmt);
 
 $resultado = mysqli_stmt_get_result($stmt);
 $usuario = mysqli_fetch_assoc($resultado);
-
+//prepara consulta, vincula o id do usuário logado, executa a consulta, pega o resultado e converte em um array
 ?>
 
 <!DOCTYPE html>

@@ -3,7 +3,8 @@ require_once "verif_admin.php";
 require_once "database.php";
 require_once "header.php"; 
 
-
+// parte para vermos todos os usuario cadastrados possui o require once do verif_admin pois aqui somente administradores
+// setados no banco de dados podem acessar.
 $conexao = mysqli_connect("localhost", "root", "", "nova_mem");
 if (!$conexao) {
     die("Connection failed: " . mysqli_connect_error());

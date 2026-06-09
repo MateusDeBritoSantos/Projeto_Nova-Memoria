@@ -1,8 +1,7 @@
 <?php
 session_start();
 include('database.php');
-// require_once "header.php";
-// require_once "acessibilidade.php";
+
 
 // Processa o login quando o formulário é enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

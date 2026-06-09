@@ -6,9 +6,9 @@ btnAcessibilidade.addEventListener("click", () => {
 });
 
 
-// =============================
-// CONFIGURAÇÕES INICIAIS
-// =============================
+
+// configurações iniciais
+
 
 let tamanhoFonte = 16;
 let espacoLinha = 1.5;
@@ -18,9 +18,9 @@ let contrasteAtivo = false;
 let fonteAlternativa = false;
 
 
-// =============================
-// TEXTO +
-// =============================
+
+// texto marior
+
 
 function aumentarTexto() {
 
@@ -31,9 +31,9 @@ function aumentarTexto() {
 }
 
 
-// =============================
-// TEXTO -
-// =============================
+
+// texto menor
+
 
 function diminuirTexto() {
 
@@ -47,9 +47,9 @@ function diminuirTexto() {
 }
 
 
-// =============================
-// ALTERAR FONTE
-// =============================
+
+// fontes
+
 
 let indiceFonte = 0;
 
@@ -73,9 +73,9 @@ function trocarFonte() {
 }
 
 
-// =============================
-// ESPAÇO ENTRE LINHAS
-// =============================
+
+// espaco entre linhas
+
 
 function maisEspacoLinha() {
 
@@ -86,9 +86,9 @@ function maisEspacoLinha() {
 }
 
 
-// =============================
-// ESPAÇO ENTRE LETRAS
-// =============================
+
+// esoaço entre as letras
+
 
 function maisEspacoLetra() {
 
@@ -99,38 +99,11 @@ function maisEspacoLetra() {
 }
 
 
-// =============================
-// ALTO CONTRASTE
-// =============================
-
-// function contrasteAlto() {
-
-//     if (!contrasteAtivo) {
-
-//         document.body.style.backgroundColor =
-//             "black";
-
-//         document.body.style.color =
-//             "yellow";
-
-//         contrasteAtivo = true;
-
-//     } else {
-
-//         document.body.style.backgroundColor =
-//             "";
-
-//         document.body.style.color =
-//             "";
-
-//         contrasteAtivo = false;
-//     }
-// }
 
 
-// =============================
-// RESTAURAR CONFIGURAÇÕES
-// =============================
+
+// voltar ao padrão
+
 
 function resetarAcessibilidade() {
 

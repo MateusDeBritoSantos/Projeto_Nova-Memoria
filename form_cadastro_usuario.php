@@ -125,7 +125,7 @@ button:hover {
 
 <body>
 
-<!-- ✅ MODAL DE SUCESSO -->
+ 
 <?php if (isset($_GET['cadastro']) && $_GET['cadastro'] == 'sucesso') { ?>
 
 <div class="modal">
